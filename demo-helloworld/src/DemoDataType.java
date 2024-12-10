@@ -1,7 +1,7 @@
-public class Helloworld {
+public class DemoDataType {
   public static void main(String[] args) {
     // Comment. Welcome to bootcamp. Hello!!
-    // ! 1. Data Type (Primitive)
+    // ! 1. Data Type (8 Primitives)
     // int -> Integer
     // x, dayOfWeek -> variable
     int x = 3; // from right to left
@@ -13,6 +13,14 @@ public class Helloworld {
 
     // variable JAva naming convension
     // caml case: dayOfWeek, y2
+
+    // ! x cannot be declared twice
+    // int x = 102;
+
+    // Declaration
+    int x100 = 9;
+    // Value Assignment
+    x100 = 9;
 
     // Re-assignment
     x = 101; // re-assign 101 to x
@@ -76,6 +84,76 @@ public class Helloworld {
     // int -> double (upcast)
     // double -> int (downcast)
 
+    // ! Store Integer, Java: int, byte, short, long
+    int value = 1000000;
+    int value2 = 1_000_000;
+    int maxInteger = 2_147_483_647;
+
+    // !byte -128 to 127
+    byte b1 = -128;
+    byte b2 = 127;
+
+    // ! short -32768 to 32767
+    short s1 = -32768;
+    short s2 = 32767;
+
+    // !long
+    // 2_147_483_658 -> int value
+    // int value -> double type variable
+
+    // long l1 = 2147483648;
+    // ! Step 1: declare an int value (not ok)
+    // ! Step 2: convert an int value to long type
+
+// ! Declare a hardcode long value, you should always add "L"
+    long l1 = 2147483648L; // L ->　declare it is a long value
+
+    // float -> double
+    double d1 = 10.2; // 10.2 -> double value
+    double d2 = 10.2d; // 10.2d -> double value
+    float f1 = 10.2f; // 10.2f -> float value
+
+    float f2 = 1039492034304832948.32498239473324239489388492384f;
+
+    // conversion
+    float f4 = 10.2f;
+    double d3 = f4; // safe. assign float value to double variable
+
+    // float f5 = d3; // ! Not safe
+
+    double d4 = 10.2f; // upcasting (float -> double)
+
+    double d5 = f4 + 10.2d;
+    // float ＋ double -> double
+    System.out.println(d5); // 20.399999809265136
+
+    double d6 = 0.2 + 0.1;
+    System.out.println(d6); // 0.30000000000000004
+
+    double d7 = 0.2 + 0.2;
+    System.out.println(d7); // 0.4
+
+    // double cannot +, -, *, /
+
+    // char
+    char c = 'x';
+    char c2 = '1';
+    char c3 = '!';
+    char c4 = ' '; // space
+    // char c5 = ''; // ! at least one character
+
+    // boolean
+    boolean b = true;
+    boolean b10 = false;
+
+    boolean isSmoker = false;
+    int age = 66;
+    boolean isElderly = age > 65; // "age > 65" -> asking if age > 65 (yes/no question)
+    System.out.println(isElderly); // true
+
+    int age2= 18;
+    boolean isAdult = age2 >=18;
+    System.out.println(isAdult); // true
 
   }
 }
