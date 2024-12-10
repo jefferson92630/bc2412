@@ -105,7 +105,7 @@ public class DemoDataType {
     // ! Step 1: declare an int value (not ok)
     // ! Step 2: convert an int value to long type
 
-// ! Declare a hardcode long value, you should always add "L"
+    // ! Declare a hardcode long value, you should always add "L"
     long l1 = 2147483648L; // L ->　declare it is a long value
 
     // float -> double
