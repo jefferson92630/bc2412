@@ -5,8 +5,12 @@ public class Exercise20241210 {
     int quantityOfApple = 3;
     int quantityOfOrange = 4;
 
-    int totalamount = quantityOfApple + quantityOfOrange;
-    System.out.println(totalamount); // 7
+    int totalqty = quantityOfApple + quantityOfOrange;
+    System.out.println(totalqty); // 7
+
+    double totalamount = quantityOfApple * priceOfApple + quantityOfOrange * priceOfOrange;
+    System.out.println(totalamount);
+
 
     int mathScore = 73;
     int englishScore = 60;
@@ -14,6 +18,8 @@ public class Exercise20241210 {
 
     double averageScore = (mathScore + englishScore + historyScore) / 3.0;
     System.out.println(averageScore);
+
+
 
 
 
