@@ -11,7 +11,7 @@ public class DemoDataType {
     double y2 = 3.2;
     // double 2w = 10.0; // ! not OK
 
-    // variable JAva naming convension
+    // variable Java naming convension
     // caml case: dayOfWeek, y2
 
     // ! x cannot be declared twice
@@ -78,7 +78,7 @@ public class DemoDataType {
     // Step 1: 3.0 -> double value, 2 -> int value
     // Step 2: double value / int value -> double value
     // Step 3: 3.0 / 2 -> 1.5
-    // Step 4: assign 1.5 (double value) to double type variable (downcasting)
+    // Step 4: assign 1.5 (double value) to integer type variable (downcasting)
     // ! Not allow assign a higher level value to lower type of variable
 
     // int -> double (upcast)
@@ -154,6 +154,10 @@ public class DemoDataType {
     int age2= 18;
     boolean isAdult = age2 >=18;
     System.out.println(isAdult); // true
+
+    byte age3 = 19;
+    boolean isTeen = age3 >20;
+    System.out.println(isTeen); //false
 
   }
 }
