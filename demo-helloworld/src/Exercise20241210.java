@@ -7,5 +7,15 @@ public class Exercise20241210 {
 
     int totalamount = quantityOfApple + quantityOfOrange;
     System.out.println(totalamount); // 7
+
+    int mathScore = 73;
+    int englishScore = 60;
+    int historyScore = 61;
+
+    double averageScore = (mathScore + englishScore + historyScore) / 3.0;
+    System.out.println(averageScore);
+
+
+
   }
 }
