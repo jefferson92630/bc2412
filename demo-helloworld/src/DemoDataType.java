@@ -72,9 +72,9 @@ public class DemoDataType {
     // Step 2: double value / int value -> double value
     // Step 3: 3.0 / 2 -> 1.5
     // Step 4: assign 1.5 (double value) to double type variable
-    System.out.println(x4);
+    System.out.println(x4); // 1.5
 
-    // int x5 = 3.0 / 2;
+    // int x5 = 3.0 / 2; // ! error
     // Step 1: 3.0 -> double value, 2 -> int value
     // Step 2: double value / int value -> double value
     // Step 3: 3.0 / 2 -> 1.5
@@ -151,13 +151,56 @@ public class DemoDataType {
     boolean isElderly = age > 65; // "age > 65" -> asking if age > 65 (yes/no question)
     System.out.println(isElderly); // true
 
-    int age2= 18;
-    boolean isAdult = age2 >=18;
+    int age2 = 18;
+    boolean isAdult = age2 >= 18;
     System.out.println(isAdult); // true
 
     byte age3 = 19;
     boolean isTeen = age3 >20;
     System.out.println(isTeen); //false
+
+    char q = 'a';
+    int u = q; // char value can be assigned to int ??
+    System.out.println(u); // 97
+    // char -> int
+
+    char q2 = 97;
+    System.out.println(q2); // 'a'
+
+    // ASCII code (0-127)
+    // a -> 97
+    // b -> 98
+    // ....
+
+    // 0, A
+    // 48, 65
+    char q3 = 48;
+    System.out.println(q3); // 0
+    int u3 = q3;
+    System.out.println(u3); // 48
+
+    char q4 = 65;
+    System.out.println(q4); // A
+    int u4 = q4;
+    System.out.println(u4); // 65
+
+    char q5= 10000; // int to char is not safe
+    System.out.println(q5); // ?
+
+    char q6 = '你';
+    int u6 = q6;
+    System.out.println(u6); // 20320
+
+    // char q7 = 70000; // ! out of the range of char value
+
+    // byte -> short -> int -> long -> float -> double
+    float f11 = 97;
+    double d11 = 97;
+    // char -> int -> long -> float -> double
+    long l10 = 'a';
+    float f10 = 'a';
+    double d10 = 'a';
+
 
   }
 }

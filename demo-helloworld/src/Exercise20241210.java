@@ -40,6 +40,10 @@ public class Exercise20241210 {
     int x20 = bb1 + bb2;
     System.out.println(x20);
 
+    byte bb3 = (byte) (x20);
+    System.out.println(x20);
+
+
 
 
     // ! Java: (1) Compile time + (2) Run time

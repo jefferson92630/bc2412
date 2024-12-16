@@ -45,7 +45,6 @@ public class JavaQuest1 {
     byte b2 = 70;
     // code here with tips, pls fix ...
     // sum = b1 + b2;
-    sum = (b1 + b2);
     System.out.println("The another sum reuslt is " + sum);
 
     // declare two boolean variable with true and false value
@@ -66,7 +65,7 @@ public class JavaQuest1 {
     int a = 7;
     int b = 3;
     // Fix it ...
-    int reminder = a - b;
+    int reminder = 7 % 3;
     System.out.println("The variable reminder is " + reminder);
 
     // declare a variable x and assign value to it.
