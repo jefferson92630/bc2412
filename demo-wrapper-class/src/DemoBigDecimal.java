@@ -49,13 +49,16 @@ public class DemoBigDecimal {
     BigDecimal bd16 = BigDecimal.valueOf(4.565).setScale(2, RoundingMode.HALF_DOWN); // 5 give-up (down) 6 write-in (up)
     System.out.println(bd16.doubleValue()); // 4.56
 
-    BigDecimal bd17 = BigDecimal.valueOf(4.566);
-    System.out.println(bd17.setScale(2, RoundingMode.HALF_DOWN)); // 4.57
+    // UP
+    BigDecimal bd17 = BigDecimal.valueOf(4.565);
+    System.out.println(bd17.setScale(2, RoundingMode.HALF_DOWN)); // 4.56, check whether the last digit reach the half, HALF means digit '5'
     System.out.println(bd17.setScale(2, RoundingMode.HALF_UP)); // 4.57
+    
 
-    BigDecimal bd18 = BigDecimal.valueOf(4.565);
+    BigDecimal bd18 = BigDecimal.valueOf(4.564);
     System.out.println(bd18.setScale(2, RoundingMode.HALF_DOWN)); // 4.56
-    System.out.println(bd18.setScale(2, RoundingMode.HALF_UP)); // 4.57
+    System.out.println(bd18.setScale(2, RoundingMode.HALF_UP)); // 4.56
+
 
     BigDecimal bd19 = BigDecimal.valueOf(4.561);
     System.out.println(bd19.setScale(2, RoundingMode.UP)); // 4.57
@@ -111,6 +114,5 @@ public class DemoBigDecimal {
 
     // Math.abs
     System.out.println(Math.abs(-9L)); // 9, absolute value, negative to positive
-
   }
 }

@@ -198,11 +198,41 @@ public class DemoArray {
     System.out.println(String.valueOf(chArr)); // "ifmmp", no need for loop, char Array -> String directly
 
     // assume we have small letter ONLY
-    char [] arr12 = new char[] {'p', 'a', 'p', 'b', 'a', 'p'};
-    // more than one loop
+    // find the max.number of char 
+     char [] arr12 = new char[] {'p', 'a', 'p', 'b', 'a', 'p'};
+     char maxNumChar = ' ';
+     int [] counters = new int[26]; // default it is 0
     for (int i = 0; i < arr12.length; i++) {
-        
+        counters[arr12[i] - 'a']++; // count the no. of char by finding its position by using subtract
     }
-    System.out.println(maxNumChar); // p
+     int max2 = Integer.MIN_VALUE;
+     for (int i = 0; i < counters.length; i++) {
+       if (counters[i] > max2) {
+        maxNumChar = (char) (i + 97); // 'a' ASCII code is 97
+        max2 = counters [i];
+       }
+     }
+     System.out.println(maxNumChar); // p
+
+     // 
+     int[] arr20 = new int [] {20, -20, 90, 50, -40};
+     // Sorting, without create a new array
+     // ! Move the max value to tail
+     // Step 1: [x, x, x, x, 90] when i = 0
+     // Step 2: [x, x, x, 50, 90] when i = 1
+     // Step 3: [x, x, 20, 50, 90] when i = 2
+     // Step 4: [x, -20, 20, 50, 90] when i = 3
+     // Step 5: [-40, -20, 20, 50, 90]
+     for (int i = 0; i < arr20.length - 1; i++) {
+        for (int j = 0; j < arr20.length - i - 1; j++) { // i = 0, j = 0,1,2,3 [swap index]
+        if (arr20[j] > arr20 [j + 1]) {
+            //  swap
+                temp = arr20[j];
+                arr20[j] = arr20[j + 1];
+                arr20[j + 1] = temp;   
+            }
     }
+ }
+    System.out.println(Arrays.toString(arr20)); // [-40, -20, 20, 50, 90]
+ }
 }

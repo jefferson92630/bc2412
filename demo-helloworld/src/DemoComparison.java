@@ -48,13 +48,13 @@ public class DemoComparison {
     boolean result3 = age2 >= 30 || gender2 == 'M';
     // event 1: age2 >= 30 -> true
     // event 2: gender2 == 'M' -> false
-    System.out.println(result3);
+    System.out.println(result3); // false
 
     // || OR (false || false)
     boolean result4 = age2 < 30 || gender2 == 'M';
     // event 1: age2 < 30 -> false
     // event 2: gender2 == 'M' -> false
-    System.out.println(result4);
+    System.out.println(result4); // false
 
     // AND OR (true AND (false or true))
     int height = 173;

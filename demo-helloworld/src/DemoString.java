@@ -76,7 +76,7 @@ public class DemoString {
 
     // substring
     // abc
-    String substr = s5.substring (0, 2);
+    String substr = s5.substring (0, 2); // 0 = start index, 2 = end index, but already -1 fromn the end index
     // ! s5 value does not change
     // ! substr is storing a new String value returned by "substring"
     System.out.println(s5); //abc

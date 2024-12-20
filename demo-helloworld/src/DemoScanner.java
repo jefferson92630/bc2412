@@ -33,9 +33,10 @@ public class DemoScanner {
     // for loop
     int totalMinutes = 0;
     for (int i = 0; i < day; i++) {
-      //for (int j = 0; j < ; j++) {
+    for (int j = 0; j < 24 ; j++) {
+      totalMinutes += 60;
     }
     System.out.println(totalMinutes);
-
   }
+}
 }

@@ -14,3 +14,16 @@
 - for + if (loop all elements +　filtering)
   - Searching (for + if)
 
+## Week 2
+- While loop (difference between for loop and while loop)
+- for-each loop (simple design for loop: one element per iteration)
+- array (Support 17 types)
+- 8 wrapper class (8 primitives)
+- String methods
+- Methods (Similar to formula)
+  - input parameters
+  - Return type
+  - Method name
+  - Method Signature = input parameters + method name
+- BigDecimal for math calculation
+

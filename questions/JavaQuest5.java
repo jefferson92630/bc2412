@@ -12,12 +12,17 @@ public class JavaQuest5 {
     // if not found, print "Not Found."
     // code here ...
 
+    int indexNum = -1;
+
     for (int i = 0; i < str.length(); i++) {
       if (str.charAt(i) == 'c') {
-        System.out.println("The index of the last character of" + " target" + " is " + i );
-      } else {
-        System.out.println("Not Found");
+        indexNum = i;
+      }
+      
+    }
+    System.out.println("The index of the last character of " +  target + " is " + indexNum); 
       }
     }
-  }
-}
+
+
+

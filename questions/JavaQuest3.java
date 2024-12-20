@@ -38,18 +38,20 @@ public class JavaQuest3 {
     if (month == 1) {
       monthOfName = "January";
       numberOfDaysInMonth = 31;
-    } else if ((month == 2 && year % 4 == 0 && year % 100 == 1) || year % 400 == 0) {
+    } else if (month == 2 && year % 400 == 0) {
       monthOfName = "February";
       numberOfDaysInMonth = 29;
-    } else if ((month == 2 && year % 4 == 1 && year % 100 == 0) || year % 400 == 0) {
+    } else if (month == 2 && year % 400 == 1) {
+      monthOfName = "February";
+      numberOfDaysInMonth = 28; 
+    } else if (month == 2) {
+      if (year % 4 == 0 && year % 100 == 1) {
+      monthOfName = "February";
+      numberOfDaysInMonth = 29;
+    } else {
       monthOfName = "February";
       numberOfDaysInMonth = 28;
-    } else if ((month == 2 && year % 4 == 0 && year % 100 == 0) || year % 400 == 0) {
-      monthOfName = "February";
-      numberOfDaysInMonth = 28;
-    } else if ((month == 2 && year % 4 == 1 && year % 100 == 1) || year % 400 == 0) {
-      monthOfName = "February";
-      numberOfDaysInMonth = 28;
+    }
     } else if (month == 3) {
       monthOfName = "March";
       numberOfDaysInMonth = 31;

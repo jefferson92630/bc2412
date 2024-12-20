@@ -59,9 +59,8 @@ public class DemoForLoop {
     int sum = 0;
     for (int i = 0; i <= 20; i++) {
       sum = sum + i;
-      System.out.println(sum); // 210
-      // System.out.println(i); // ! i is declared within for the loop
     }
+    System.out.println(sum); // 210
 
     // sum up all odd number between 0 - 10
     // sum up all even number between 0 - 10
@@ -83,7 +82,7 @@ public class DemoForLoop {
      diff = evenSum - oddSum;
      }
 
-    // int diff = oddSum > evenSum ? oddSum - evenSum : evenSum - oddSum;
+    diff = oddSum > evenSum ? oddSum - evenSum : evenSum - oddSum; // is oddSum larger than evenSum, if yes, oddSum - evenSum or else (evenSum - oddSum)
     System.out.println(diff); // 5
 
     // Searching
