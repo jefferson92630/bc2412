@@ -105,7 +105,9 @@ public class LoopExercise {
     // Use: for loop + replace method
     String[] arr10 = new String[] {"akc", "xxx", "x", "xbx", "mkx"};
     for (int i = 0; i < arr10.length; i++) {
-        arr10[i].replace('x','k');
+      
+      arr10[i] = arr10[i].replace("x","k");
+      
     }
       System.out.println(Arrays.toString(arr10));
  
@@ -117,10 +119,17 @@ public class LoopExercise {
     String s11 = "kLKloOOu";
     int count2 = 0;
     for (int i = 0; i < s11.length(); i++) {
-      //if (s11.charAt(i) == s11.);
-      count2++;
+      if (s11.charAt(i) == 'K'){
+        count2++;
+      }
+      if (s11.charAt(i) == 'L') {
+        count2++;
+      }
+      if (s11.charAt(i) == 'O') {
+        count2++;
+      }
     }
-    System.out.println("count" + "=" + count2);
+    System.out.println("count uppercase" + "=" + count2);
 
 
     // 12. Print the following pattern of * value
@@ -196,10 +205,9 @@ public class LoopExercise {
     // 17. Add value 0.1 to each of value in array arr16
     // Print: [0.3, 0.4, 0.7]
     for (int i = 0; i < arr16.length; i++) {
-      arr16[i] += 0.1;
-      BigDecimal bd1 = BigDecimal.valueOf(arr16[0]);
-      BigDecimal bd2 = BigDecimal.valueOf(arr16[1]);
-      BigDecimal bd3 = BigDecimal.valueOf(arr16[2]);
+      BigDecimal bd1 = BigDecimal.valueOf(0.1);
+     // arr16[i] = arr16[i].add(bd1);
+
     }
     System.out.println(Arrays.toString(arr16));
 
