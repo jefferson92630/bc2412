@@ -3,6 +3,8 @@ public class Person { // blueprint - define a Person
   private String name;
   private int age;
   private String emailAddress;
+  private char gender; // F,M
+  private int nameLength;
 
   // constructor (not method)
   // constructor is to create object
@@ -10,6 +12,15 @@ public class Person { // blueprint - define a Person
     this.name = name;
     this.age = age;
     this.emailAddress = emailAddress;
+
+   }
+
+   public int getNameLength() {
+    return this.nameLength;
+   }
+
+   public boolean isMale() {
+    return this.gender == 'M' ? true : false;
    }
 
   // getter (instance = object)
@@ -56,8 +67,7 @@ public class Person { // blueprint - define a Person
       System.out.println((p.getName() + "," + p.getAge() + "," + p.getEmailAddress()));
      }
 
-     String s1 = "hello";
-     String[] strings = new String[] {s1, "world"};
+      
+     }
 
     }
-}

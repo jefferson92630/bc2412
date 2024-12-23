@@ -37,8 +37,21 @@ public class Abc {
       System.out.println((p.getName() + "," + p.getAge() + "," + p.getEmailAddress()));
      }
 
+     
+
      String s1 = "hello";
      String[] strings = new String[] {s1, "world"};
+
+     // Compile time
+     // Run time -> p1.getAge()
+
+     // Person p1 = null;
+     // p1.getK(); // compile error, -> p1 come from Person.class, and this class has NO getk() method
+
+     p1.getAge();
+     // p1.getAge(); 
+     // Compile OK, -> p1 come from Person.class, and this class has getAge() method
+     // Runtime error -> because p1 object reference finally cannot point to an object.
 
     }
 }
