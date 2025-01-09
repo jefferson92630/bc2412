@@ -3,12 +3,12 @@ public class Abc {
   public static void main(String[] args) {
 
     // constructor parameter must be same as object parameter
-     Person p1 = new Person ("vincent", 18, "vincent@gmail.com");
+     Person p1 = new Person ("vincent", 18, "vincent@gmail.com", 'M');
      System.out.println(p1.getName()); // vincent
      System.out.println(p1.getAge()); // 18
      System.out.println(p1.getEmailAddress()); 
 
-     Person p2 = new Person("lucas", 17, "lucas@gmail.com");
+     Person p2 = new Person("lucas", 17, "lucas@gmail.com", 'M');
      System.out.println(p2.getName()); // lucas
      System.out.println(p2.getAge()); // 17
      System.out.println(p2.getEmailAddress()); 
@@ -31,7 +31,7 @@ public class Abc {
     System.out.println(p3.getEmailAddress()); // hello@gmail.com
 
 
-     Person[] persons = new Person[] {p1, p2, new Person ("dicky", 19, "dicky@gmail,com")};
+     Person[] persons = new Person[] {p1, p2, new Person ("dicky", 19, "dicky@gmail,com", 'F')};
      for (Person p: persons) {
       // vincent, 18, vincent@gmail.com
       System.out.println((p.getName() + "," + p.getAge() + "," + p.getEmailAddress()));

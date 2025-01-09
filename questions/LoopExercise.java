@@ -65,13 +65,18 @@ public class LoopExercise {
     // otherwise, print "d is not found."
     String str7 = "ijkabcpodi";
     char target2 = 'd';
+    boolean isDExist = false;
     for (int i = 0; i < str7.length(); i++) {
       if (str7.charAt(i) == target2) {
+        isDExist = true;
+      }
+    }
+      if (isDExist == true) {
         System.out.println(target2 + " is found.");
       } else {
         System.out.println(target2 + " is not found.");
       }
-    }
+  
 
     // 8. Check if the string s8b is a substring of s8a
     // print "s8b is a substring."
@@ -79,19 +84,22 @@ public class LoopExercise {
     // Use: for loop + if + substring method
     String s8a = "abcba";
     String s8b = "cba";
+    boolean isExist = false;
     for (int i = 0; i < s8a.length() - s8b.length() + 1; i++) {
       if (s8a.substring(i, i + s8b.length()).equals(s8b)) {
-        System.out.println("s8b is a substring");
+        isExist = true;
+      }
+    }
+      if (isExist == true) {
+      System.out.println("s8b is a substring");
       } else {
         System.out.println("s8b is not a substring");
       }
-    }
-
+  
     // 9. Count the number of char value in the given String s9
     // print "count=2"
     // Use: for loop + if
     String s9 = "pampers";
-    char c9 = 'p';
     int count = 0;
     for (int i = 0; i < s9.length(); i++) {
       if (s9.charAt(i) == 'p') {
@@ -105,27 +113,17 @@ public class LoopExercise {
     // Use: for loop + replace method
     String[] arr10 = new String[] {"akc", "xxx", "x", "xbx", "mkx"};
     for (int i = 0; i < arr10.length; i++) {
-      
       arr10[i] = arr10[i].replace("x","k");
-      
     }
-      System.out.println(Arrays.toString(arr10));
+      System.out.println(arr10);
  
-
-
     // 11. Count the number of Uppercase char value in the given string s11
     // Print "count uppercase=4"
     // Use: for loop + if
     String s11 = "kLKloOOu";
     int count2 = 0;
     for (int i = 0; i < s11.length(); i++) {
-      if (s11.charAt(i) == 'K'){
-        count2++;
-      }
-      if (s11.charAt(i) == 'L') {
-        count2++;
-      }
-      if (s11.charAt(i) == 'O') {
+      if (s11.charAt(i) == s11.toUpperCase().charAt(i)){
         count2++;
       }
     }
@@ -138,9 +136,9 @@ public class LoopExercise {
     // *****
 
     for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 5; j++) {
+      for (int j = 0; j < 4; j++) {
+        System.out.print("*");
       }
-      System.out.print("*");
       System.out.println("*");
     }
 
@@ -172,7 +170,7 @@ public class LoopExercise {
         default:
         score -= 1;
     }
-    }
+  }
     System.out.println(score);
    
     
@@ -205,8 +203,7 @@ public class LoopExercise {
     // 17. Add value 0.1 to each of value in array arr16
     // Print: [0.3, 0.4, 0.7]
     for (int i = 0; i < arr16.length; i++) {
-      BigDecimal bd1 = BigDecimal.valueOf(0.1);
-     // arr16[i] = arr16[i].add(bd1);
+    // arr16[i] = BigDecimal.valueOf(arr16[i]).add(BigDecimal.valueOf(0.1).doubleValue());
 
     }
     System.out.println(Arrays.toString(arr16));
@@ -266,5 +263,6 @@ public class LoopExercise {
         }
      }
      System.out.println("longest" + "=" + target5);
+
   }
 }

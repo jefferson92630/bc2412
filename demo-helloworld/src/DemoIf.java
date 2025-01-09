@@ -21,7 +21,7 @@ public class DemoIf {
       System.out.println("The char at index 1 = e"); // must need to be true to generate result
     }
 
-    if (x > 5){
+    if (x > 5) {
       System.out.println("x > 5.");
     } else { // x <= 5
         System.out.println("x <= 5.");

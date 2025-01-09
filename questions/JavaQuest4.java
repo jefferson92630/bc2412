@@ -13,15 +13,10 @@ public class JavaQuest4 {
     // 2. Divisible by 3
     // 3. > 0
     int count = 0;
-    int arr[] = new int [10];
     for (int i = 1; i < 100; i++) {
       // code here ...
-      if (i % 2 == 0 && i % 3 == 0) {
+      if (i % 2 == 0 && i % 3 == 0 && count < 10) {
         count++;
-        count = i;
-        if (i == 10) {
-        break;
-        }
         System.out.println(i);
       }
     }

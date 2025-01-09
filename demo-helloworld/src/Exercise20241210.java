@@ -52,5 +52,10 @@ public class Exercise20241210 {
       //(1.2) compile success -> class file
     // (2)Java Virtual Machine (JVM) -> convert class file to machine code -> execute machine code 
 
+
+    String sentence = "hello world";
+    String[] subSentences = sentence.split(" ");
+    
+
   }
 }

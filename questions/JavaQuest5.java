@@ -18,9 +18,11 @@ public class JavaQuest5 {
       if (str.charAt(i) == 'c') {
         indexNum = i;
       }
-      
     }
+    
     System.out.println("The index of the last character of " +  target + " is " + indexNum); 
+
+
       }
     }
 

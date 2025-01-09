@@ -1,11 +1,11 @@
 import java.math.BigDecimal;
 
-public class Circle {
+public class Circle3 {
   private double radius;
   // private String color;
 
 
-  public Circle(double radius) {
+  public Circle3(double radius) {
     this.radius = radius;
   }
 
@@ -39,12 +39,12 @@ public class Circle {
     // area
     // BigDecimal
 
-    Circle c1 = new Circle (3.0);
+    Circle3 c1 = new Circle3 (3.0);
     // Presentation
     System.out.println(c1.calculateArea()); // ~28.27
 
     // Formula
-    System.out.println(Circle.calculateArea2(3.0)); // ~28.27
+    System.out.println(Circle3.calculateArea2(3.0)); // ~28.27
     
   }
 
