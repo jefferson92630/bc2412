@@ -6,12 +6,17 @@ public class DemoArrayList {
     public static void main(String[] args) {
     // Many String = String[]
 
-    // Variable length
-    ArrayList<String> strings = new ArrayList<>();
-    strings.add("ABC");
+    // Array: fixed length
+    String [] ss = new String[3];
+    // ss is an address of the array
+
+    // ArrayList: Variable length
+    // Underlying data structure -> array
+    ArrayList<String> strings = new ArrayList<>(); // arr with size 0
+    strings.add("ABC"); // arr with size 1
     strings.add("IJK");
-    System.out.println(strings.size()); // 2
-    System.out.println(strings.get(1)); // IJK
+    System.out.println(strings.size()); // 2, arr.length
+    System.out.println(strings.get(1)); // IJK, jump to the elements with index 1 directly
     // System.out.println(strings.get(2)); // out of boundary, there are two Strings only, index from 0 to 1
 
 

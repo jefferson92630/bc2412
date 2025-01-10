@@ -29,6 +29,7 @@ public int getAg() {
   return this.ag;
 }
 
+
 public int getPa() {
   return this.pa;
 }

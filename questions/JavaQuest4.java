@@ -1,4 +1,4 @@
-package questions;
+
 
 public class JavaQuest4 {
   /**

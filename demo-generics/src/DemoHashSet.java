@@ -18,18 +18,8 @@ public class DemoHashSet {
     strings.remove("XYZ"); // method is checking value already
     System.out.println(strings.size()); // 2
 
-    // No remove by index method, because HashSet is not ArrayList
-    int targetRemoveIndex = 1;
-    String targetRemoveString = null;
-    int index = 0;
-   for (String s: strings) {
-      if (targetRemoveIndex == index) {
-        targetRemoveString = s;
-        break;
-      }
-      index++;
-    }
-    System.out.println(targetRemoveString); // "IJK" -> count index: 1
-    System.out.println(strings.remove(targetRemoveString)); // true
+    // HashSet cannot be ordering naturally
+    // because its underlying data structure is not an array.
+    // so, HashSet did not provide remove by index method.
   }
 }

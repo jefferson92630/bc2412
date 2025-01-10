@@ -1,4 +1,4 @@
-package questions;
+
 /**
  * Example Output
  * Second Max = 230
