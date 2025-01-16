@@ -69,6 +69,7 @@ public class DemoHashMap {
       System.out.println(entry.getKey() + " " + entry.getValue());
     }
 
+
     // Apple
     // APPLE
     for (String key: fruitMap.keySet()) {
@@ -140,8 +141,6 @@ public class DemoHashMap {
       bookMap.put(b2.getId(), b2);
       bookMap.put(b3.getId(), b3);
 
-      System.out.println(bookMap.size());
-    
     System.out.println(bookMap.size()); // 3
 
     // Store the book count

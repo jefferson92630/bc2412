@@ -64,6 +64,7 @@ public class ArrayListExercise {
 
     HashSet<Integer> convertedList = new HashSet<>(num);
     System.out.println(convertedList);
+    
 
 
 
@@ -191,6 +192,12 @@ public class ArrayListExercise {
     student3.add(s8);
     student3.add(s9);
     
+    HashSet<Student> commonStudents = new HashSet<>();
+    for (Student s: student2) {
+      if(student3.contains(s))
+      commonStudents.add(s);
+    }
+    System.out.println(commonStudents); 
   }
 
 
@@ -216,9 +223,10 @@ public class ArrayListExercise {
     }
 
     public static String getName2(int id) {
-      if (student.getId() == id)
-      return "";
-    }
+      String notFound = "";
+     if (Student(id, name).getId().equals(id))
+    return "";
+  }
 
     @Override
     public boolean equals(Object obj) {
