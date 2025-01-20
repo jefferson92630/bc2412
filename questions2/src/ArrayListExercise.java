@@ -4,6 +4,53 @@ import java.util.Objects;
 
 public class ArrayListExercise {
 
+  public static class Student {
+    private int id;
+    private String name;
+  
+    // Constructor
+    // getter, setter, etc.
+  
+    private Student (int id, String name) {
+      this.id = id;
+      this.name = name;
+    }
+
+    public int getId() {
+      return this.id;
+    }
+
+    public String getName() {
+      return this.name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+      if (this == obj)
+      return true;
+      if (!(obj instanceof Student))
+      return false;
+      Student student = (Student) obj;
+      return Objects.equals(this.id, student.getId()) 
+      && Objects.equals(this.name, student.getName());
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(this.id, this.name);
+    }
+
+    @Override
+    public String toString() {
+      return "Student[" 
+        + "id=" + this.id
+        + ",name=" + this.name
+        + "]";
+
+    }
+  
+  }
+
 
   public static void main(String[] args) {
 
@@ -66,8 +113,6 @@ public class ArrayListExercise {
     System.out.println(convertedList);
     
 
-
-
     // Exercise 4: HashSet Basic Operations
 
     // 4a. Create a HashSet of strings to store country names: "USA", "India", "China", "Japan".
@@ -99,7 +144,7 @@ public class ArrayListExercise {
     nums2.add(5.5);
     System.out.println(nums2.contains(3.3));
     nums2.remove(2.2);
-    System.out.println(nums2);
+    System.out.println(nums2.size());
 
     // Exercise 6: Intersection of Sets
 
@@ -121,6 +166,8 @@ public class ArrayListExercise {
     nums4.add(50);
     nums4.add(60);
 
+    nums3.retainAll(nums4);
+    System.out.println(nums3);
 
 
     // Exercise 7: Convert HashSet to ArrayList
@@ -164,10 +211,13 @@ public class ArrayListExercise {
       }
       students.remove(s2);
 
-
-
-
-
+    ArrayList<Student> studentStartsWithA = new ArrayList<>();
+      for (Student s : students) {
+        if (s.getName().startsWith("A")) {
+          studentStartsWithA.add(s);
+        }
+      }
+      System.out.println(studentStartsWithA);
 
     // Exercise 9: HashSet of Students
     // 9a. Create two HashSets of Student objects:
@@ -194,66 +244,19 @@ public class ArrayListExercise {
     
     HashSet<Student> commonStudents = new HashSet<>();
     for (Student s: student2) {
-      if(student3.contains(s))
+      if (student3.contains(s))
       commonStudents.add(s);
     }
     System.out.println(commonStudents); 
   }
 
+  public static String foundStudentNameByID(ArrayList<Student> students, int id) {
+    for (Student student : students) {
+      if (student.getId() == id)
+      return student.name;
+    }
+    return "Student not found";
+ }
 
-
-  public static class Student {
-    private int id;
-    private String name;
   
-    // Constructor
-    // getter, setter, etc.
-  
-    private Student (int id, String name) {
-      this.id = id;
-      this.name = name;
-    }
-
-    public int getId() {
-      return this.id;
-    }
-
-    public String getName() {
-      return this.name;
-    }
-
-    public static String getName2(int id) {
-      String notFound = "";
-     if (Student(id, name).getId().equals(id))
-    return "";
-  }
-
-    @Override
-    public boolean equals(Object obj) {
-      if (this == obj)
-      return true;
-      if (!(obj instanceof Student))
-      return false;
-      Student student = (Student) obj;
-      return Objects.equals(this.id, student.getId()) 
-      && Objects.equals(this.name, student.getName());
-    }
-
-    @Override
-    public int hashCode() {
-      return Objects.hash(this.id, this.name);
-    }
-
-    @Override
-    public String toString() {
-      return "Student[" 
-        + "id=" + this.id
-        + ",name=" + this.name
-        + "]";
-
-    }
-  
-  
-  }
-  
-  }
+}
