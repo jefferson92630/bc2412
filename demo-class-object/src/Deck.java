@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Deck {
   private Card[] cards;
 
@@ -11,7 +14,9 @@ public class Deck {
     }
   }
 
-
+public List<Card> getCards() {
+  return Arrays.asList(this.cards);
+}
 
 
   public static void main(String[] args) {

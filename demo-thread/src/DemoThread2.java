@@ -22,6 +22,7 @@ public class DemoThread2 {
 
     DemoThread2 central = new DemoThread2();
     Runnable placeAddMillionTask = () -> {
+      System.out.println("Thread ID: " + Thread.currentThread().getId());
       for (int i = 0; i < 1000000; i++) {
       central.addOne();
     }

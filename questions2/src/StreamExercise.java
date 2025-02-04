@@ -9,6 +9,10 @@ import java.util.stream.Collectors;
 
 public class StreamExercise {
 
+  public static enum Gender {
+    MALE,FEMALE,;
+  }
+  
   public static class Student {
     private String name;
     private int score;

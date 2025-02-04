@@ -5,9 +5,12 @@ public class Card {
   // "static final" -> constant
   // Constant naming convention 
   public static final char[] SUITES = new char[] {'D', 'C', 'H', 'S'};
-  public static final char[] RANKS = new char[] {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+  public static final Rank[] RANKS = new char[] {Rank.ACE, Rank.TWO, Rank.THREE, 
+    Rank.FOUR, Rank.FIVE, Rank.SIX, Rank.SEVEN, Rank.EIGHT, Rank.NINE, 
+    Rank.TEN, Rank.JACK, Rank.QUEEN, Rank.KING};
   // String (more than one char) vs char (Single character)
-  private char rank; // 'A', '2', ...., 'K'
+
+  private Rank rank; // 'A', '2', ...., 'K'
   private char suite; // 'D', 'C', 'H', 'S'
 
   public static final int x = 3;
@@ -17,7 +20,7 @@ public class Card {
     this.suite = suite;
   }
 
-  public char getRank() {
+  public Rank getRank() {
     return this.rank;
   }
 
@@ -25,6 +28,8 @@ public class Card {
     return this.suite;
   }
 
-  
+  public boolean isSameRank() {
+    return this.rank = cards.getRank();
+  }
 
 }
